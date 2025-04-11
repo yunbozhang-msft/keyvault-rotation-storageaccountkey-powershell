@@ -3,6 +3,8 @@ using namespace System.Net
 # Input bindings are passed in via param block.
 param($Request, $TriggerMetadata)
 
+Set-AzContext -Environment AzureChinaCloud
+
 function RegenerateKey($keyId, $providerAddress){
     Write-Host "Regenerating key. Id: $keyId Resource Id: $providerAddress"
     
