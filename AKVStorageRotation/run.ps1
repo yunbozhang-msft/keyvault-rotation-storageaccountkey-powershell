@@ -1,5 +1,7 @@
 param($eventGridEvent, $TriggerMetadata)
 
+Set-AzContext -Environment AzureChinaCloud
+
 function RegenerateKey($keyId, $providerAddress){
     Write-Host "Regenerating key. Id: $keyId Resource Id: $providerAddress"
     
